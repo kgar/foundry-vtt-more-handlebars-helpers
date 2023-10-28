@@ -17,3 +17,8 @@ Helpers that are included in this module:
 I am just making existing helpers available to Foundry VTT, but if you find this useful, feel free to toss some support my way.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V4Q88Z7) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kgar)
+
+## Credit
+
+These handlebars helpers are made possible by
+- [Jon Schlinkert](https://github.com/jonschlinkert) - https://github.com/Budibase/handlebars-helpers
