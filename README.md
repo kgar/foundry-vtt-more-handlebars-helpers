@@ -45,7 +45,7 @@ Replace all instances of `searchText` with `replacementText` in `text`.
 ## Need More Helpers?
 
 - Open an [issue](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/issues/new).
-- Optional: submit a [pull request](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/compare) to resolve the issue if you know how to do it and what to contribute.
+- Optional: submit a [pull request](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/compare) to resolve the issue if you know how to do it and want to contribute.
 
 ## Supporting this Module
 
