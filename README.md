@@ -1,6 +1,6 @@
-# More Handlebars Helpers
+# Foundry VTT: More Handlebars Helpers
 
-Do you need more handlebars helpers? How about all 130(ish) helpers from [this incredible repository](https://github.com/Budibase/handlebars-helpers)?
+Do you need more handlebars helpers in [Foundry VTT](https://foundryvtt.com/)? How about all 130(ish) helpers from [this incredible repository](https://github.com/Budibase/handlebars-helpers)?
 
 This is the Foundry Module for you!
 
