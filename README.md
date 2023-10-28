@@ -21,7 +21,7 @@ Replace first instance of `searchText` with `replacementText` in `text`.
 ```hbs
 <!-- value: "One and Two and Three" -->
 {{ more-handlebars-helpers-replace value 'and ', '' }}
-<!-- results in: "One Two Three" -->
+<!-- results in: "One Two and Three" -->
 ```
 
 ## `replaceAll`
@@ -39,7 +39,7 @@ Replace all instances of `searchText` with `replacementText` in `text`.
 ```hbs
 <!-- value: "One and Two and Three" -->
 {{ more-handlebars-helpers-replaceAll value 'and ', '' }}
-<!-- results in: "One Two and Three" -->
+<!-- results in: "One Two Three" -->
 ```
 
 ## Need More Helpers?
