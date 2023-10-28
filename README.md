@@ -1,24 +1,54 @@
 # Foundry VTT: More Handlebars Helpers
 
-Do you need more handlebars helpers in [Foundry VTT](https://foundryvtt.com/)? How about all 130(ish) helpers from [this incredible repository](https://github.com/Budibase/handlebars-helpers)?
+Do you need more handlebars helpers in [Foundry VTT](https://foundryvtt.com/)?
 
 This is the Foundry Module for you!
 
 Helpers that are included in this module:
-1. Everything from https://github.com/Budibase/handlebars-helpers
+    
+## `replace`
+
+Replace first instance of `searchText` with `replacementText` in `text`.
+
+### Params
+
+- `text` {string}
+- `searchText` {string}: the text to be replaced
+- `replacementText` {string}: the text to replace `searchText` once
+
+### Example
+
+```hbs
+<!-- value: "One and Two and Three" -->
+{{ more-handlebars-helpers-replace value 'and ', '' }}
+<!-- results in: "One Two Three" -->
+```
+
+## `replaceAll`
+
+Replace all instances of `searchText` with `replacementText` in `text`.
+
+### Params
+
+- `text` {string}
+- `searchText` {string}: the text to be replaced
+- `replacementText` {string}: the text to replace `searchText` throughout `text`
+
+### Example
+
+```hbs
+<!-- value: "One and Two and Three" -->
+{{ more-handlebars-helpers-replaceAll value 'and ', '' }}
+<!-- results in: "One Two and Three" -->
+```
 
 ## Need More Helpers?
 
 - Open an [issue](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/issues/new).
-- Optional: submit a [pull request](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/compare) to resolve the issue if you know how to do it.
+- Optional: submit a [pull request](https://github.com/kgar/foundry-vtt-more-handlebars-helpers/compare) to resolve the issue if you know how to do it and what to contribute.
 
 ## Supporting this Module
 
-I am just making existing helpers available to Foundry VTT, but if you find this useful, feel free to toss some support my way.
+I plan to keep building up this collection of helpers over time. If you like what I'm doing, feel free to send some support my way.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V4Q88Z7) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kgar)
-
-## Credit
-
-These handlebars helpers are made possible by
-- [Jon Schlinkert](https://github.com/jonschlinkert) - https://github.com/Budibase/handlebars-helpers
