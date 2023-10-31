@@ -55,7 +55,7 @@ Strip HTML tags from a string, so that only the text is preserved.
 ```handlebars
 <!-- value: "<span>hello</span>" -->
 {{ more-handlebars-helpers-sanitize value }}
-<!-- results in : 'hello' -->
+<!-- results in : "hello" -->
 ```
 
 ## `split`
@@ -79,6 +79,37 @@ Split string by the given character.
         <li>c</li>
     </ul> 
 -->
+```
+
+## `table`
+
+Look up a value in a static look-up table and replace it with another value.
+
+### Params
+
+- `lookup` {string}: the text to use as a lookup key
+- `key1` {string}: the key for `result1`; can contain a regular expression
+- `result1` {string}: the value to return when `lookup` matches `key1`; can contain capturing groups (e.g. $1) to copy information from the matching regex key
+- `key2`, `result2`, `key3`, `result3`, etc.
+
+### Example
+
+We want to look up what "blue" means, according to a static series of keys and results.
+
+```handlebars
+<!-- value: "blue" -->
+{{ more-handlebars-helpers-table value "red" "angry" "blue" "sad" "yellow" "envious" "green" "happy" }}
+<!-- results in: "sad" -->
+```
+
+### Example with Regex
+
+We want to look up what "blue" means, according to a static series of keys and results. The `blue` key uses regex to capture the key, and its value references the key via `$1`.
+
+```handlebars
+<!-- value: "What does blue mean?" -->
+{{ more-handlebars-helpers-table value "red" "angry" "(blue)" "$1 means sad" "yellow" "envious" "green" "happy" }}
+<!-- results in: "blue means sad" -->
 ```
 
 ## Need More Helpers?
