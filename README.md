@@ -5,7 +5,7 @@ Do you need more handlebars helpers in [Foundry VTT](https://foundryvtt.com/)?
 This is the Foundry Module for you!
 
 Helpers that are included in this module:
-    
+
 ## `replace`
 
 Replace first instance of `searchText` with `replacementText` in `text`.
@@ -18,7 +18,7 @@ Replace first instance of `searchText` with `replacementText` in `text`.
 
 ### Example
 
-```hbs
+```handlebars
 <!-- value: "One and Two and Three" -->
 {{ more-handlebars-helpers-replace value 'and ', '' }}
 <!-- results in: "One Two and Three" -->
@@ -36,10 +36,33 @@ Replace all instances of `searchText` with `replacementText` in `text`.
 
 ### Example
 
-```hbs
+```handlebars
 <!-- value: "One and Two and Three" -->
 {{ more-handlebars-helpers-replaceAll value 'and ', '' }}
 <!-- results in: "One Two Three" -->
+```
+
+## `split`
+
+Split string by the given character.
+
+### Params
+
+- `text` {string}
+- `separator` {string}: The pattern describing where each split should occur
+
+### Example
+
+```handlebars
+<!-- value: "a,b,c" -->
+<ul>{{#each (more-handlebars-helpers-split value ',')}}<li>{{this}}</li>{{/each}}</ul>
+<!-- results in (newlines and indents added for documentation): 
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul> 
+-->
 ```
 
 ## Need More Helpers?
