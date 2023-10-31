@@ -1,0 +1,1 @@
+Adapted from https://github.com/ericnorris/striptags Copyright (c) [2020] [Eric Norris]

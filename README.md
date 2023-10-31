@@ -42,6 +42,22 @@ Replace all instances of `searchText` with `replacementText` in `text`.
 <!-- results in: "One Two Three" -->
 ```
 
+## `sanitize`
+
+Strip HTML tags from a string, so that only the text is preserved.
+
+### Params
+
+- `htmlString` {string}: The string of HTML to sanitize.
+
+### Example
+
+```handlebars
+<!-- value: "<span>hello</span>" -->
+{{ more-handlebars-helpers-sanitize value }}
+<!-- results in : 'hello' -->
+```
+
 ## `split`
 
 Split string by the given character.
