@@ -2,7 +2,7 @@
   "id": "more-handlebars-helpers",
   "title": "More Handlebars Helpers",
   "description": "A Foundry VTT Module which registers a large number of handlebars helpers.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "library": "true",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
@@ -26,7 +26,7 @@
   "esmodules": ["scripts/module.mjs"],
   "bugs": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/issues",
   "changelog": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/releases",
-  "download": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/releases/download/v1.0.0/module.zip",
+  "download": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/releases/download/v1.1.0/module.zip",
   "manifest": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/releases/latest/download/module.json",
   "readme": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers/blob/main/README.md",
   "url": "https://github.com/kgar/foundry-vtt-more-handlebars-helpers"
