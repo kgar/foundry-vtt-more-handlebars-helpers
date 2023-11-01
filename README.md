@@ -124,4 +124,4 @@ We want to look up what "blue" means, according to a static series of keys and r
 
 I plan to keep building up this collection of helpers over time. If you like what I'm doing, feel free to send some support my way.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](ko-fi.com/iamkgar) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kgar)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/iamkgar) [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kgar)
