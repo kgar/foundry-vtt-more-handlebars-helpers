@@ -1,5 +1,5 @@
-export default function (text, searchText, replacementTest) {
+export default function (text, searchTextOrRegExp, replacementText) {
   return typeof text === 'string'
-    ? text?.replace(searchText, replacementTest)
+    ? text?.replace(searchTextOrRegExp, replacementText)
     : text;
 }
