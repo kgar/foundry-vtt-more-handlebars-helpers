@@ -9,15 +9,61 @@ This is the Foundry Module for you!
 
 Helpers that are included in this module:
 
-## `replace`
+- [`regexp`](#regexp)
+  - [Params](#params)
+  - [Examples](#examples)
+- [`replace`](#replace)
+  - [Params](#params-1)
+  - [Example](#example)
+- [`replaceAll`](#replaceall)
+  - [Params](#params-2)
+  - [Example](#example-1)
+- [`sanitize`](#sanitize)
+  - [Params](#params-3)
+  - [Example](#example-2)
+- [`split`](#split)
+  - [Params](#params-4)
+  - [Example](#example-3)
+- [`table`](#table)
+  - [Params](#params-5)
+  - [Example](#example-4)
+  - [Example with Regex](#example-with-regex)
+- [Need More Helpers?](#need-more-helpers)
+- [Supporting this Module](#supporting-this-module)
 
-Replace first instance of `searchText` with `replacementText` in `text`.
+
+## `regexp`
+
+Converts `text` into a `RegExp` instance to be fed into other helpers.
 
 ### Params
 
 - `text` {string}
-- `searchText` {string}: the text to be replaced
-- `replacementText` {string}: the text to replace `searchText` once
+- `flags` (optional, default `"g"`) {string}: flags to use when creating the instance of `RegExp`.
+
+### Examples
+
+```handlebars
+<!-- value: "Hello,\n<hr />there,\n<hr />world!" -->
+{{ more-handlebars-helpers-replace value (more-handlebars-helpers-regexp '\n<hr />') ' ' }}
+<!-- results in: "Hello, there, world!" -->
+```
+
+```handlebars
+<!-- value: "Hello,\n<hr />there,\n<HR />world!" -->
+{{ more-handlebars-helpers-replace value (more-handlebars-helpers-regexp '\n<hr />' 'gi') ' ' }}
+<!-- results in: "Hello, there, world!" -->
+```
+
+## `replace`
+
+Replace first instance of `searchTextOrRegExp` with `replacementText` in `text`.
+
+### Params
+
+- `text` {string}
+- `searchTextOrRegExp` {string}: the text to be replaced, or an instance of `RegExp` (see [regexp](#regexp))
+- `replacementText` {string}: the text to replace `searchTextOrRegExp`; it follows the rules of `String.prototype.replace()`, so `RegExp` replacements can replace multiple results while a regular string of text will be replaced once
 
 ### Example
 
@@ -29,13 +75,13 @@ Replace first instance of `searchText` with `replacementText` in `text`.
 
 ## `replaceAll`
 
-Replace all instances of `searchText` with `replacementText` in `text`.
+Replace all instances of `searchTextOrRegExp` with `replacementText` in `text`.
 
 ### Params
 
 - `text` {string}
-- `searchText` {string}: the text to be replaced
-- `replacementText` {string}: the text to replace `searchText` throughout `text`
+- `searchTextOrRegExp` {string}: the text to be replaced, or an instance of `RegExp` (see [regexp](#regexp))
+- `replacementText` {string}: the text to replace `searchTextOrRegExp` throughout `text`
 
 ### Example
 
