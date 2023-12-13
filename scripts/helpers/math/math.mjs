@@ -9,7 +9,7 @@ import isNumber from '../is-number/isNumber.mjs';
  */
 export function abs(num) {
   if (!isNumber(num)) {
-    throw new TypeError('expected a number');
+    return num;
   }
   return Math.abs(num);
 }
@@ -62,9 +62,9 @@ export function avg() {
 
 export function ceil(num) {
   if (!isNumber(num)) {
-    throw new TypeError('expected a number');
+    return num;
   }
-  return Math.ceil(num);
+  return Math.ceil(Number(num));
 }
 
 /**
@@ -76,11 +76,8 @@ export function ceil(num) {
  */
 
 export function divide(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
+  if (!isNumber(a) || !isNumber(b)) {
+    return a;
   }
   return Number(a) / Number(b);
 }
@@ -95,28 +92,9 @@ export function divide(a, b) {
 
 export function floor(num) {
   if (!isNumber(num)) {
-    throw new TypeError('expected a number');
+    return num;
   }
-  return Math.floor(num);
-}
-
-/**
- * Return the difference of `a` minus `b`.
- *
- * @param {Number} `a`
- * @param {Number} `b`
- * @alias subtract
- * @api public
- */
-
-export function minus(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
-  }
-  return Number(a) - Number(b);
+  return Math.floor(Number(num));
 }
 
 /**
@@ -129,11 +107,8 @@ export function minus(a, b) {
  */
 
 export function modulo(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
+  if (!isNumber(a) || !isNumber(b)) {
+    return a;
   }
   return Number(a) % Number(b);
 }
@@ -144,36 +119,14 @@ export function modulo(a, b) {
  * @param {Number} `a` factor
  * @param {Number} `b` multiplier
  * @return {Number}
- * @alias times
  * @api public
  */
 
 export function multiply(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
+  if (!isNumber(a) || !isNumber(b)) {
+    return a;
   }
   return Number(a) * Number(b);
-}
-
-/**
- * Add `a` by `b`.
- *
- * @param {Number} `a` factor
- * @param {Number} `b` multiplier
- * @api public
- */
-
-export function plus(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
-  }
-  return Number(a) + Number(b);
 }
 
 /**
@@ -186,25 +139,10 @@ export function plus(a, b) {
  */
 
 export function random(min, max) {
-  if (!isNumber(min)) {
-    throw new TypeError('expected minimum to be a number');
-  }
-  if (!isNumber(max)) {
-    throw new TypeError('expected maximum to be a number');
+  if (!isNumber(min) || !isNumber(max)) {
+    return '';
   }
   return min + Math.floor(Math.random() * (max - min + 1));
-}
-
-/**
- * Get the remainder when `a` is divided by `b`.
- *
- * @param {Number} `a` a
- * @param {Number} `b` b
- * @api public
- */
-
-export function remainder(a, b) {
-  return a % b;
 }
 
 /**
@@ -217,7 +155,7 @@ export function remainder(a, b) {
 
 export function round(num) {
   if (!isNumber(num)) {
-    throw new TypeError('expected a number');
+    return num;
   }
   return Math.round(num);
 }
@@ -228,16 +166,12 @@ export function round(num) {
  * @param {Number} `a`
  * @param {Number} `b`
  * @return {Number}
- * @alias minus
  * @api public
  */
 
 export function subtract(a, b) {
-  if (!isNumber(a)) {
-    throw new TypeError('expected the first argument to be a number');
-  }
-  if (!isNumber(b)) {
-    throw new TypeError('expected the second argument to be a number');
+  if (!isNumber(a) || !isNumber(b)) {
+    return a;
   }
   return Number(a) - Number(b);
 }
@@ -265,18 +199,4 @@ export function sum() {
     }
   }
   return sum;
-}
-
-/**
- * Multiply number `a` by number `b`.
- *
- * @param {Number} `a` factor
- * @param {Number} `b` multiplier
- * @return {Number}
- * @alias multiply
- * @api public
- */
-
-export function times() {
-  return multiply.apply(this, arguments);
 }

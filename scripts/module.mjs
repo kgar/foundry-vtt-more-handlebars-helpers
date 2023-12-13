@@ -14,13 +14,10 @@ Hooks.on('ready', function () {
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-ceil`, math.ceil);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-divide`, math.divide);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-floor`, math.floor);
-  Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-minus`, math.minus);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-modulo`, math.modulo);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-multiply`, math.multiply);
-  Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-plus`, math.plus);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-random`, math.random);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-regexp`, regExp);
-  Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-remainder`, math.remainder);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-replace`, replace);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-replaceAll`, replaceAll);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-round`, math.round);
@@ -29,5 +26,4 @@ Hooks.on('ready', function () {
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-subtract`, math.subtract);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-sum`, math.sum);
   Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-table`, table);
-  Handlebars.registerHelper(`${CONSTANTS.MODULE_ID}-times`, math.times);
 });
