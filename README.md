@@ -27,44 +27,41 @@ Helpers that are included in this module:
 - [`floor`](#floor)
   - [Params](#params-5)
   - [Examples](#examples-5)
-- [`floor`](#floor-1)
+- [`modulo`](#modulo)
   - [Params](#params-6)
   - [Examples](#examples-6)
-- [`modulo`](#modulo)
+- [`multiply`](#multiply)
   - [Params](#params-7)
   - [Examples](#examples-7)
-- [`multiply`](#multiply)
+- [`random`](#random)
   - [Params](#params-8)
   - [Examples](#examples-8)
-- [`random`](#random)
+- [`regexp`](#regexp)
   - [Params](#params-9)
   - [Examples](#examples-9)
-- [`regexp`](#regexp)
-  - [Params](#params-10)
-  - [Examples](#examples-10)
 - [`replace`](#replace)
-  - [Params](#params-11)
+  - [Params](#params-10)
   - [Example](#example)
 - [`replaceAll`](#replaceall)
-  - [Params](#params-12)
+  - [Params](#params-11)
   - [Example](#example-1)
 - [`round`](#round)
-  - [Params](#params-13)
-  - [Examples](#examples-11)
+  - [Params](#params-12)
+  - [Examples](#examples-10)
 - [`sanitize`](#sanitize)
-  - [Params](#params-14)
+  - [Params](#params-13)
   - [Example](#example-2)
 - [`split`](#split)
-  - [Params](#params-15)
+  - [Params](#params-14)
   - [Example](#example-3)
 - [`subtract`](#subtract)
+  - [Params](#params-15)
+  - [Examples](#examples-11)
+- [`sum`](#sum)
   - [Params](#params-16)
   - [Examples](#examples-12)
-- [`sum`](#sum)
-  - [Params](#params-17)
-  - [Examples](#examples-13)
 - [`table`](#table)
-  - [Params](#params-18)
+  - [Params](#params-17)
   - [Example](#example-4)
   - [Example with Regex](#example-with-regex)
 - [Need More Helpers?](#need-more-helpers)
@@ -167,22 +164,6 @@ Get the `Math.floor()` of the given value.
 <!-- results in: "2" -->
 ```
 
-## `floor`
-
-Get the `Math.floor()` of the given value.
-
-### Params
-
-- `value` {number}
-
-### Examples
-
-```handlebars
-<!-- value: 2.9 -->
-{{ more-handlebars-helpers-floor value }}
-<!-- results in: "2" -->
-```
-
 ## `modulo`
 
 Get the remainder of a division operation.
@@ -227,7 +208,7 @@ Generate a random integer between two values, including the min and max values.
 ### Examples
 
 ```handlebars
-{{ more-handlebars-helpers-modulo 1 10 }}
+{{ more-handlebars-helpers-random 1 10 }}
 <!-- results in: random integer between 1 and 10 -->
 ```
 
