@@ -36,11 +36,11 @@ export function add(a, b) {
  * Returns the average of all numbers in the given array.
  *
  * ```handlebars
- * {{avg "[1, 2, 3, 4, 5]"}}
- * <!-- results in: '3' -->
+ * {{avg 1 2 3 4}}
+ * <!-- results in: '2.5' -->
  * ```
  *
- * @param {Array} `array` Array of numbers to add up.
+ * @param arguments {arguments array} one or more arguments
  * @return {Number}
  * @api public
  */
@@ -180,7 +180,7 @@ export function subtract(a, b) {
  * Returns the sum of all numbers in the given array.
  *
  * ```handlebars
- * {{sum "[1, 2, 3, 4, 5]"}}
+ * {{sum 1 2 3 4 5}}
  * <!-- results in: '15' -->
  * ```
  * @param {Array} `array` Array of numbers to add up.

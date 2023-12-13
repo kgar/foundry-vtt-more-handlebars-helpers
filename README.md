@@ -9,28 +9,227 @@ This is the Foundry Module for you!
 
 Helpers that are included in this module:
 
-- [`regexp`](#regexp)
+- [`abs`](#abs)
   - [Params](#params)
   - [Examples](#examples)
-- [`replace`](#replace)
+- [`add`](#add)
   - [Params](#params-1)
+  - [Examples](#examples-1)
+- [`avg`](#avg)
+  - [Params](#params-2)
+  - [Examples](#examples-2)
+- [`ceil`](#ceil)
+  - [Params](#params-3)
+  - [Examples](#examples-3)
+- [`divide`](#divide)
+  - [Params](#params-4)
+  - [Examples](#examples-4)
+- [`floor`](#floor)
+  - [Params](#params-5)
+  - [Examples](#examples-5)
+- [`floor`](#floor-1)
+  - [Params](#params-6)
+  - [Examples](#examples-6)
+- [`modulo`](#modulo)
+  - [Params](#params-7)
+  - [Examples](#examples-7)
+- [`multiply`](#multiply)
+  - [Params](#params-8)
+  - [Examples](#examples-8)
+- [`random`](#random)
+  - [Params](#params-9)
+  - [Examples](#examples-9)
+- [`regexp`](#regexp)
+  - [Params](#params-10)
+  - [Examples](#examples-10)
+- [`replace`](#replace)
+  - [Params](#params-11)
   - [Example](#example)
 - [`replaceAll`](#replaceall)
-  - [Params](#params-2)
+  - [Params](#params-12)
   - [Example](#example-1)
+- [`round`](#round)
+  - [Params](#params-13)
+  - [Examples](#examples-11)
 - [`sanitize`](#sanitize)
-  - [Params](#params-3)
+  - [Params](#params-14)
   - [Example](#example-2)
 - [`split`](#split)
-  - [Params](#params-4)
+  - [Params](#params-15)
   - [Example](#example-3)
+- [`subtract`](#subtract)
+  - [Params](#params-16)
+  - [Examples](#examples-12)
+- [`sum`](#sum)
+  - [Params](#params-17)
+  - [Examples](#examples-13)
 - [`table`](#table)
-  - [Params](#params-5)
+  - [Params](#params-18)
   - [Example](#example-4)
   - [Example with Regex](#example-with-regex)
 - [Need More Helpers?](#need-more-helpers)
 - [Supporting this Module](#supporting-this-module)
 
+## `abs`
+
+Return the magnitude of `a`.
+
+### Params
+
+- `num` {number}
+
+### Examples
+
+```handlebars
+<!-- value: -1 -->
+{{ more-handlebars-helpers-abs value }}
+<!-- results in: "1" -->
+```
+
+## `add`
+
+Return the sum of `a` plus `b`.
+
+### Params
+
+- `a` {number}
+- `b` {number}
+
+### Examples
+
+```handlebars
+<!-- value: 2 -->
+{{ more-handlebars-helpers-add value 2 }}
+<!-- results in: "4" -->
+```
+
+## `avg`
+
+Returns the average of all numbers in the given array.
+
+### Params
+
+- `...args` {numbers}: one or more number arguments
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-avg 1 2 3 4 }}
+<!-- results in: "2.5" -->
+```
+
+## `ceil`
+
+Get the `Math.ceil()` of the given value.
+
+### Params
+
+- `a` {number}
+
+### Examples
+
+```handlebars
+<!-- value: 2.1 -->
+{{ more-handlebars-helpers-ceil value }}
+<!-- results in: "3" -->
+```
+
+## `divide`
+
+Divide `a` by `b`
+
+### Params
+
+- `a` {number}: numerator
+- `b` {number}: denominator
+
+### Examples
+
+```handlebars
+<!-- value: 2.1 -->
+{{ more-handlebars-helpers-divide 4 2 }}
+<!-- results in: "2" -->
+```
+
+## `floor`
+
+Get the `Math.floor()` of the given value.
+
+### Params
+
+- `value` {number}
+
+### Examples
+
+```handlebars
+<!-- value: 2.9 -->
+{{ more-handlebars-helpers-floor value }}
+<!-- results in: "2" -->
+```
+
+## `floor`
+
+Get the `Math.floor()` of the given value.
+
+### Params
+
+- `value` {number}
+
+### Examples
+
+```handlebars
+<!-- value: 2.9 -->
+{{ more-handlebars-helpers-floor value }}
+<!-- results in: "2" -->
+```
+
+## `modulo`
+
+Get the remainder of a division operation.
+
+### Params
+
+- `a` {number}: numerator
+- `b` {number}: denominator
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-modulo 9 2 }}
+<!-- results in: "1" -->
+```
+
+## `multiply`
+
+Return the product of `a` times `b`.
+
+### Params
+
+- `a` {number}: factor
+- `b` {number}: multiplier
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-multiply 3 3 }}
+<!-- results in: "9" -->
+```
+
+## `random`
+
+Generate a random integer between two values, including the min and max values.
+
+### Params
+
+- `min` {number}
+- `max` {number}
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-modulo 1 10 }}
+<!-- results in: random integer between 1 and 10 -->
+```
 
 ## `regexp`
 
@@ -91,6 +290,21 @@ Replace all instances of `searchTextOrRegExp` with `replacementText` in `text`.
 <!-- results in: "One Two Three" -->
 ```
 
+## `round`
+
+Round the given number.
+
+### Params
+
+- `number` {number}
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-round 2.55 }}
+<!-- results in: "3" -->
+```
+
 ## `sanitize`
 
 Strip HTML tags from a string, so that only the text is preserved.
@@ -128,6 +342,37 @@ Split string by the given character.
         <li>c</li>
     </ul> 
 -->
+```
+
+## `subtract`
+
+Return the difference of `a` minus `b`.
+
+### Params
+
+- `a` {number}: left term
+- `b` {number}: right right
+
+### Examples
+
+```handlebars
+{{more-handlebars-helpers-subtract 10 9 }}
+<!-- results in : "1" -->
+```
+
+## `sum`
+
+Returns the sum of all numbers in the given array.
+
+### Params
+
+- `...args` {numbers}: two or more number arguments
+
+### Examples
+
+```handlebars
+{{ more-handlebars-helpers-sum 1 2 3 4 }}
+<!-- results in: "10" -->
 ```
 
 ## `table`
