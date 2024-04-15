@@ -27,41 +27,53 @@ Helpers that are included in this module:
 - [`floor`](#floor)
   - [Params](#params-5)
   - [Examples](#examples-5)
-- [`modulo`](#modulo)
+- [`gt`](#gt)
   - [Params](#params-6)
   - [Examples](#examples-6)
-- [`multiply`](#multiply)
+- [`gte`](#gte)
   - [Params](#params-7)
   - [Examples](#examples-7)
-- [`random`](#random)
+- [`lt`](#lt)
   - [Params](#params-8)
   - [Examples](#examples-8)
-- [`regexp`](#regexp)
+- [`lte`](#lte)
   - [Params](#params-9)
   - [Examples](#examples-9)
-- [`replace`](#replace)
+- [`modulo`](#modulo)
   - [Params](#params-10)
+  - [Examples](#examples-10)
+- [`multiply`](#multiply)
+  - [Params](#params-11)
+  - [Examples](#examples-11)
+- [`random`](#random)
+  - [Params](#params-12)
+  - [Examples](#examples-12)
+- [`regexp`](#regexp)
+  - [Params](#params-13)
+  - [Examples](#examples-13)
+- [`replace`](#replace)
+  - [Params](#params-14)
   - [Example](#example)
 - [`replaceAll`](#replaceall)
-  - [Params](#params-11)
+  - [Params](#params-15)
   - [Example](#example-1)
 - [`round`](#round)
-  - [Params](#params-12)
-  - [Examples](#examples-10)
+  - [Params](#params-16)
+  - [Examples](#examples-14)
 - [`sanitize`](#sanitize)
-  - [Params](#params-13)
+  - [Params](#params-17)
   - [Example](#example-2)
 - [`split`](#split)
-  - [Params](#params-14)
+  - [Params](#params-18)
   - [Example](#example-3)
 - [`subtract`](#subtract)
-  - [Params](#params-15)
-  - [Examples](#examples-11)
+  - [Params](#params-19)
+  - [Examples](#examples-15)
 - [`sum`](#sum)
-  - [Params](#params-16)
-  - [Examples](#examples-12)
+  - [Params](#params-20)
+  - [Examples](#examples-16)
 - [`table`](#table)
-  - [Params](#params-17)
+  - [Params](#params-21)
   - [Example](#example-4)
   - [Example with Regex](#example-with-regex)
 - [Need More Helpers?](#need-more-helpers)
@@ -163,6 +175,91 @@ Get the `Math.floor()` of the given value.
 {{ more-handlebars-helpers-floor value }}
 <!-- results in: "2" -->
 ```
+
+## `gt`
+
+Test whether a value is greater than another value.
+
+### Params
+
+- `a` {any}: the value to test
+- `b` {any}: the value to test against
+
+### Examples
+
+```handlebars
+<!-- value: 1 -->
+{{#if (more-handlebars-helpers-gt value 0)}} 
+    GREAT 
+{{else}}
+    NOPE
+{{/if}}
+<!-- results in: "GREAT" -->
+```
+
+## `gte`
+
+Test whether a value is greater than or equal to another value.
+
+### Params
+
+- `a` {any}: the value to test
+- `b` {any}: the value to test against
+
+### Examples
+
+```handlebars
+<!-- value: 0 -->
+{{#if (more-handlebars-helpers-gte value 0)}} 
+    STILL GREAT
+{{else}}
+    NOPE
+{{/if}}
+<!-- results in: "STILL GREAT" -->
+```
+
+## `lt`
+
+Test whether a value is less than another value.
+
+### Params
+
+- `a` {any}: the value to test
+- `b` {any}: the value to test against
+
+### Examples
+
+```handlebars
+<!-- value: 1 -->
+{{#if (more-handlebars-helpers-lt value 0)}} 
+    IS IT REALLY
+{{else}}
+    NOPE
+{{/if}}
+<!-- results in: "NOPE" -->
+```
+
+## `lte`
+
+Test whether a value is less than or equal to another value.
+
+### Params
+
+- `a` {any}: the value to test
+- `b` {any}: the value to test against
+
+### Examples
+
+```handlebars
+<!-- value: 0 -->
+{{#if (more-handlebars-helpers-lte value 0)}} 
+    GOOD TO GO
+{{else}}
+    NOPE
+{{/if}}
+<!-- results in: "GOOD TO GO" -->
+```
+
 
 ## `modulo`
 
