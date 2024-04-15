@@ -35,9 +35,17 @@ jobs:
         with:
           allowUpdates: true # set this to false if you want to prevent updating existing releases
           name: ${{ github.event.release.name }}
-          draft: false
-          prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: "./module.json, ./module.zip"
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
+          prerelease: ${{ github.event.release.prerelease }}
+          makeLatest: ${{ !github.event.release.prerelease }}
+
+      - name: Publish Module to FoundryVTT Website
+        if: ${{ !github.event.release.prerelease }}
+        id: publish-to-foundry-website
+        uses: cs96and/FoundryVTT-release-package@v1
+        with:
+          package-token: ${{ secrets.PACKAGE_TOKEN }}
+          manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
